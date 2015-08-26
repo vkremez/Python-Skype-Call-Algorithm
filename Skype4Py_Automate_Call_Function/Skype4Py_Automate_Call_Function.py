@@ -16,7 +16,10 @@ while 1==1:
 CallIsFinished = set([Skype4Py.clsFailed, Skype4Py.clsFinished, Skype4Py.clsMissed, Skype4Py.clsMissed, Skype4Py.clsRefused, Skype4Py.clsBusy, Skype4Py.clsCancelled]);
 
 def AttachmentStatusText(status):
-    return Skype4Py.Convert.AttachmentStatusToText(status)
+    return skype.Convert.AttachmentStatusToText(status)
+
+def CallStatusText(status):
+    return skype.Convert.CallStatusToText(status)
 
 # The below-referenced is fired up when the status of Call object has changed.
 def onCall(call, status):
